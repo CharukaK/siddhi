@@ -43,6 +43,14 @@ public class And extends Expression {
         return rightExpression;
     }
 
+    public void setLeftExpression(Expression leftExpression) {
+        this.leftExpression = leftExpression;
+    }
+
+    public void setRightExpression(Expression rightExpression) {
+        this.rightExpression = rightExpression;
+    }
+
     @Override
     public String toString() {
         return "And{" +
