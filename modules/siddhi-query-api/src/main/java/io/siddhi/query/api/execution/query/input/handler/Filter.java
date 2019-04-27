@@ -68,12 +68,12 @@ public class Filter implements StreamHandler {
         return new Expression[]{filterExpression};
     }
 
-    public void setFilterExpression(Expression filterExpression) {
-        this.filterExpression = filterExpression;
-    }
-
     public Expression getFilterExpression() {
         return filterExpression;
+    }
+
+    public void setFilterExpression(Expression filterExpression) {
+        this.filterExpression = filterExpression;
     }
 
     @Override

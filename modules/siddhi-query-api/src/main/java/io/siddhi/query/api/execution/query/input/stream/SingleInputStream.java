@@ -197,6 +197,15 @@ public class SingleInputStream extends InputStream {
         return true;
     }
 
+    public int getWindowPosition() {
+
+        return windowPosition;
+    }
+
+    public void setWindowPosition(int windowPosition) {
+        this.windowPosition = windowPosition;
+    }
+
     @Override
     public int hashCode() {
         int result = (isFaultStream ? 1 : 0);

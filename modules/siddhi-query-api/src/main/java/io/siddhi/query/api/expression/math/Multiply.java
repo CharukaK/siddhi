@@ -22,7 +22,7 @@ import io.siddhi.query.api.expression.Expression;
 /**
  * Multiply {@link Expression}
  */
-public class Multiply extends Expression {
+public class Multiply extends Expression implements Operation {
 
     private static final long serialVersionUID = 1L;
     private Expression leftValue;

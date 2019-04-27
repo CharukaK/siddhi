@@ -3,21 +3,32 @@ package io.siddhi.query.api.optimizer.beans;
 import io.siddhi.query.api.expression.Expression;
 import io.siddhi.query.api.expression.condition.And;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class InputFilterBean {
+public class InputFilterModel {
     private String streamId;
-    private List<String> attributes;
-    private Expression filterExpression;
+    private String streamRefId;
 
-    public InputFilterBean(String streamId, List<String> attributes) {
+    private List<String> attributes;
+
+    private Expression filterExpression = null;
+
+    public InputFilterModel(String streamId, String streamRefId, List<String> attributes) {
         this.streamId = streamId;
+        this.streamRefId = streamRefId;
         this.attributes = attributes;
     }
 
     public String getStreamId() {
         return streamId;
+    }
+
+    public String getStreamRefId() {
+        return streamRefId;
+    }
+
+    public void setStreamRefId(String streamRefId) {
+        this.streamRefId = streamRefId;
     }
 
     public List<String> getAttributes() {
@@ -28,8 +39,12 @@ public class InputFilterBean {
         return filterExpression;
     }
 
+    public void setFilterExpression(Expression filterExpression) {
+        this.filterExpression = filterExpression;
+    }
+
     public void addConjunctiveFilterExpression(Expression expression) {
-        if(filterExpression == null) {
+        if (filterExpression == null) {
             filterExpression = expression;
         } else {
             filterExpression = new And(expression, filterExpression);

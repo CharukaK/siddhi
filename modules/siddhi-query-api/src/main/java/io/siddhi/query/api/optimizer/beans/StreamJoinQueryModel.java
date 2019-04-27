@@ -8,25 +8,25 @@ import io.siddhi.query.api.expression.math.Add;
 import java.util.HashMap;
 import java.util.List;
 
-public class StreamJoinQueryBean {
-    private InputFilterBean leftInputStream;
-    private InputFilterBean rightInputStream;
+public class StreamJoinQueryModel {
+    private InputFilterModel leftInputStream;
+    private InputFilterModel rightInputStream;
     private Expression havingFilter;
     private Expression onCondition;
     private HashMap<String,String> selectionMap=new HashMap<>();
 
-    public StreamJoinQueryBean(InputFilterBean leftInputStream, InputFilterBean rightInputStream, List<OutputAttribute> selectionList) {
+    public StreamJoinQueryModel(InputFilterModel leftInputStream, InputFilterModel rightInputStream, List<OutputAttribute> selectionList) {
         this.leftInputStream = leftInputStream;
         this.rightInputStream = rightInputStream;
         selectionList.forEach(entry -> this.selectionMap.put(entry.getRename(),
                 (entry.getExpression() instanceof Variable ? ((Variable)entry.getExpression()).getAttributeName():"Attribute Function")));
     }
 
-    public InputFilterBean getLeftInputStream() {
+    public InputFilterModel getLeftInputStream() {
         return leftInputStream;
     }
 
-    public InputFilterBean getRightInputStream() {
+    public InputFilterModel getRightInputStream() {
         return rightInputStream;
     }
 

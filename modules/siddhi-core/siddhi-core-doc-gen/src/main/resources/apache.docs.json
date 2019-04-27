@@ -36,11 +36,11 @@
     "description": "The siddhi-io-cdc extension is an extension to Siddhi. It receives change data from MySQL, MS SQL Server, Postgresql, H2 and Oracle in the key-value format."
   },
   "siddhi-store-redis": {
-    "lastModifiedDateTime": "Wed, 24 Apr 2019 06:58:10 GMT",
+    "lastModifiedDateTime": "Fri, 26 Apr 2019 10:58:58 GMT",
     "description": "The siddhi-store-redis extension is an extension for siddhi redis event table implementation. This extension can be used to persist events to a redis cloud instance of version 4.x.x."
   },
   "siddhi-execution-kalmanfilter": {
-    "lastModifiedDateTime": "Wed, 27 Mar 2019 15:25:33 GMT",
+    "lastModifiedDateTime": "Fri, 26 Apr 2019 06:13:59 GMT",
     "description": "The siddhi-execution-kalman-filter extension is an extension to Siddhi provides that Kalman filtering capabilities to Siddhi. This allows you to detect outliers of input data."
   },
   "siddhi-execution-regex": {
@@ -60,7 +60,7 @@
     "description": "The siddhi-map-text extension is an extension to Siddhi that supports mapping incoming text messages to a stream at the source, and mapping a stream to text messages at the sink."
   },
   "siddhi-store-cassandra": {
-    "lastModifiedDateTime": "Tue, 09 Apr 2019 19:23:56 GMT",
+    "lastModifiedDateTime": "Fri, 26 Apr 2019 06:30:09 GMT",
     "description": "The siddhi-store-cassandra extension is an extension to Siddhi that can be used to persist events to a Cassandra instance of the users choice. Find some useful links below:"
   },
   "siddhi-store-hbase": {
@@ -80,7 +80,7 @@
     "description": "The siddhi-store-rdbms extension is an extension to Siddhi that can be used to persist events to an RDBMS instance of the user's choice."
   },
   "siddhi-store-mongodb": {
-    "lastModifiedDateTime": "Thu, 18 Apr 2019 09:24:48 GMT",
+    "lastModifiedDateTime": "Fri, 26 Apr 2019 10:58:53 GMT",
     "description": "The siddhi-store-mongodb extension is an extension to Siddhi that can be used to persist events to a MongoDB instance of the users choice. Find some useful links below:"
   },
   "siddhi-execution-time": {

@@ -22,7 +22,7 @@ import io.siddhi.query.api.expression.Expression;
 /**
  * Divide {@link Expression}
  */
-public class Divide extends Expression {
+public class Divide extends Expression implements Operation {
 
     private static final long serialVersionUID = 1L;
     private Expression leftValue;
