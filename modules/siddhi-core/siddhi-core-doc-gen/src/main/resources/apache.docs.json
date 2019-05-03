@@ -1,10 +1,10 @@
 {
   "siddhi-io-twitter": {
-    "lastModifiedDateTime": "Wed, 10 Apr 2019 09:49:40 GMT",
+    "lastModifiedDateTime": "Tue, 30 Apr 2019 12:23:35 GMT",
     "description": "The siddhi-io-twitter extension is an extension to Siddhi. It publishes event data from Twitter Applications in the key-value map format."
   },
   "siddhi-execution-markov": {
-    "lastModifiedDateTime": "Wed, 27 Mar 2019 15:24:36 GMT",
+    "lastModifiedDateTime": "Mon, 29 Apr 2019 09:48:38 GMT",
     "description": "The siddhi-execution-markov extension is an extension to Siddhi that allows abnormal patterns relating to user activity to be detected when carrying out real time analysis."
   },
   "siddhi-script-js": {
@@ -28,7 +28,7 @@
     "description": "The siddhi-io-websocket extension is an extension to Siddhi that allows to receive and publish events through WebSocket."
   },
   "siddhi-execution-priority": {
-    "lastModifiedDateTime": "Tue, 09 Apr 2019 14:33:15 GMT",
+    "lastModifiedDateTime": "Mon, 29 Apr 2019 10:04:03 GMT",
     "description": "The siddhi-execution-priority extension is an extension to Siddhi that keeps track of the priority of events in a stream."
   },
   "siddhi-io-cdc": {
@@ -44,7 +44,7 @@
     "description": "The siddhi-execution-kalman-filter extension is an extension to Siddhi provides that Kalman filtering capabilities to Siddhi. This allows you to detect outliers of input data."
   },
   "siddhi-execution-regex": {
-    "lastModifiedDateTime": "Thu, 11 Apr 2019 11:14:43 GMT",
+    "lastModifiedDateTime": "Mon, 29 Apr 2019 06:53:18 GMT",
     "description": "The siddhi-execution-regex extension is an extension to Siddhi that provides basic RegEx execution capabilities."
   },
   "siddhi-map-keyvalue": {
@@ -56,7 +56,7 @@
     "description": "The siddhi-io-jms extension is an extension to Siddhi that used to receive and publishe events via JMS Message. This extension allows users to subscribe to a JMS broker and receive/publish JMS messages."
   },
   "siddhi-map-text": {
-    "lastModifiedDateTime": "Tue, 09 Apr 2019 06:02:32 GMT",
+    "lastModifiedDateTime": "Fri, 03 May 2019 10:48:25 GMT",
     "description": "The siddhi-map-text extension is an extension to Siddhi that supports mapping incoming text messages to a stream at the source, and mapping a stream to text messages at the sink."
   },
   "siddhi-store-cassandra": {
@@ -124,11 +124,11 @@
     "description": "The siddhi-execution-env extension is an extension to Siddhi that provides the capability to read environment properties inside Siddhi stream definitions and use it inside queries. Functions of the env extension are as follows.."
   },
   "siddhi-execution-approximate": {
-    "lastModifiedDateTime": "Wed, 10 Apr 2019 10:22:45 GMT",
+    "lastModifiedDateTime": "Mon, 29 Apr 2019 13:08:01 GMT",
     "description": "The siddhi-execution-approximate is an extension to Siddhi that performs approximate computing on event streams."
   },
   "siddhi-map-xml": {
-    "lastModifiedDateTime": "Tue, 09 Apr 2019 18:07:08 GMT",
+    "lastModifiedDateTime": "Fri, 03 May 2019 10:47:33 GMT",
     "description": "The siddhi-map-xml extension is an extension to Siddhi that supports mapping incoming XML events to a stream at the source, and mapping a stream to XML events at the sink."
   },
   "siddhi-io-file": {
@@ -136,11 +136,11 @@
     "description": "The siddhi-io-file extension is an extension to Siddhi which is used to receive/publish event data from/to file. It supports both binary and text formats."
   },
   "siddhi-execution-timeseries": {
-    "lastModifiedDateTime": "Tue, 02 Apr 2019 09:53:59 GMT",
+    "lastModifiedDateTime": "Mon, 29 Apr 2019 09:53:15 GMT",
     "description": "The siddhi-execution-timeseries extension is an extension to Siddhi which enables users to forecast and detect outliers in time series data, using Linear Regression Models."
   },
   "siddhi-execution-sentiment": {
-    "lastModifiedDateTime": "Tue, 02 Apr 2019 06:32:34 GMT",
+    "lastModifiedDateTime": "Mon, 29 Apr 2019 13:02:34 GMT",
     "description": "The siddhi-execution-sentiment extension is an extension to Siddhi that performs sentiment analysis using Afinn Wordlist-based approach."
   },
   "siddhi-io-sqs": {
@@ -160,7 +160,7 @@
     "description": "The siddhi-map-binary extension is an extension to Siddhi that can be used to convert binary events to/from Siddhi events."
   },
   "siddhi-execution-streamingml": {
-    "lastModifiedDateTime": "Wed, 27 Mar 2019 15:26:51 GMT",
+    "lastModifiedDateTime": "Mon, 29 Apr 2019 14:33:02 GMT",
     "description": "The siddhi-execution-streamingml is an extension to Siddhi that performs streaming machine learning on event streams."
   },
   "siddhi-execution-reorder": {
@@ -180,7 +180,7 @@
     "description": "The siddhi-execution-math is an extension to Siddhi, which provides useful mathematical functions that can make your siddhi queries more flexible."
   },
   "siddhi-io-rabbitmq": {
-    "lastModifiedDateTime": "Wed, 10 Apr 2019 09:49:46 GMT",
+    "lastModifiedDateTime": "Tue, 30 Apr 2019 11:24:42 GMT",
     "description": "The siddhi-io-rabbitmq is an extension to Siddhi that publish and receive events from rabbitmq broker."
   },
   "siddhi-map-csv": {
@@ -188,11 +188,11 @@
     "description": "The siddhi-map-csv extension is an extension to Siddhi that supports mapping incoming events with csv format to a stream at the source, and mapping a stream to csv format events at the sink."
   },
   "siddhi-store-solr": {
-    "lastModifiedDateTime": "Thu, 18 Apr 2019 09:22:03 GMT",
+    "lastModifiedDateTime": "Mon, 29 Apr 2019 06:30:51 GMT",
     "description": "The siddhi-store-solr extension is an extension for siddhi Solr event table implementation. This extension can be used to persist events to a Solr cloud instance of version 6.x.x."
   },
   "siddhi-map-json": {
-    "lastModifiedDateTime": "Mon, 08 Apr 2019 12:03:19 GMT",
+    "lastModifiedDateTime": "Fri, 03 May 2019 10:46:57 GMT",
     "description": "The siddhi-map-json extension is an extension to Siddhi which is used to convert JSON message to/from Siddhi events."
   }
 }

@@ -22,7 +22,7 @@ import io.siddhi.query.api.expression.Expression;
 /**
  * Or condition {@link Expression}
  */
-public class Or extends Expression {
+public class Or extends Expression implements Condition {
 
     private static final long serialVersionUID = 1L;
 
