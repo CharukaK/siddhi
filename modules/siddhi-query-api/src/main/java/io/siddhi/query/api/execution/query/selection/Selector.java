@@ -75,6 +75,10 @@ public class Selector implements SiddhiElement {
         }
     }
 
+    public void setHavingExpression(Expression havingExpression) {
+        this.havingExpression = havingExpression;
+    }
+
     public Selector having(Expression havingExpression) {
         this.havingExpression = havingExpression;
         return this;

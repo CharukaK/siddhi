@@ -156,7 +156,7 @@
     "description": "The siddhi-io-wso2event extension is an extension to Siddhi that receives and publishes events in the WSO2Event format via Thrift or Binary protocols."
   },
   "siddhi-map-binary": {
-    "lastModifiedDateTime": "Mon, 08 Apr 2019 12:04:56 GMT",
+    "lastModifiedDateTime": "Fri, 03 May 2019 18:28:09 GMT",
     "description": "The siddhi-map-binary extension is an extension to Siddhi that can be used to convert binary events to/from Siddhi events."
   },
   "siddhi-execution-streamingml": {

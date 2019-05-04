@@ -109,6 +109,10 @@ public class SingleInputStream extends InputStream {
         return this;
     }
 
+    public void setStreamHandlers(List<StreamHandler> streamHandlers) {
+        this.streamHandlers = streamHandlers;
+    }
+
     public List<StreamHandler> getStreamHandlers() {
         return streamHandlers;
     }

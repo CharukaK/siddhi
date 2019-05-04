@@ -1,4 +1,4 @@
-package io.siddhi.query.api.optimizer2.beans.InputModels;
+package io.siddhi.query.compiler.optimizer.beans.InputModels;
 
 import io.siddhi.query.api.definition.Attribute;
 import io.siddhi.query.api.execution.query.input.handler.Filter;
@@ -13,6 +13,7 @@ import java.util.List;
 
 public class StreamInputModel {
     private String streamId;
+    private String streamRefId;
     private List<Attribute> attributes;
     private List<StreamHandler> streamFilters;
     private Expression filterExpression;
@@ -20,6 +21,7 @@ public class StreamInputModel {
 
     public StreamInputModel(InputStream inputStream, HashMap<String, List<Attribute>> streamDefMap) {
         this.streamId = ((SingleInputStream) inputStream).getStreamId();
+        this.streamRefId = ((SingleInputStream) inputStream).getStreamReferenceId();
         this.attributes = streamDefMap.get(streamId);
         this.streamFilters = ((SingleInputStream) inputStream).getStreamHandlers();
         this.filterExpression = getFilterExpression(this.streamFilters);
@@ -61,6 +63,25 @@ public class StreamInputModel {
     private Expression getFilterExpression(List<StreamHandler> streamHandlers) {
         return !streamHandlers.isEmpty() && streamHandlers.get(0) instanceof Filter ?
                 ((Filter) streamHandlers.get(0)).getFilterExpression() : null;
+    }
+
+    public String getStreamRefId() {
+        return streamRefId;
+    }
+
+    public void updateStreamHandlers() {
+        if (!streamFilters.isEmpty() && filterExpression != null) {
+            if (streamFilters.get(0) instanceof Filter) {
+                ((Filter) streamFilters.get(0)).setFilterExpression(filterExpression);
+            } else {
+                streamFilters.add(0, new Filter(filterExpression));
+                if (windowPosition > -1) {
+                    windowPosition++;
+                }
+            }
+        } else if (filterExpression != null) {
+            streamFilters.add(new Filter(filterExpression));
+        }
     }
 
 }

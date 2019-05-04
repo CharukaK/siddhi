@@ -103,4 +103,13 @@ public class Compare extends Expression implements Condition {
         NOT_EQUAL
     }
 
+    @Override
+    public void setRightExpression(Expression rightExpression) {
+        this.rightExpression = rightExpression;
+    }
+
+    @Override
+    public void setLeftExpression(Expression leftExpression) {
+        this.leftExpression = leftExpression;
+    }
 }

@@ -83,7 +83,7 @@ import io.siddhi.query.api.expression.constant.IntConstant;
 import io.siddhi.query.api.expression.constant.LongConstant;
 import io.siddhi.query.api.expression.constant.StringConstant;
 import io.siddhi.query.api.expression.constant.TimeConstant;
-import io.siddhi.query.api.optimizer2.SiddhiAppOptimizer;
+import io.siddhi.query.compiler.optimizer.SiddhiAppOptimizer;
 import io.siddhi.query.api.util.SiddhiConstants;
 import io.siddhi.query.compiler.SiddhiQLBaseVisitor;
 import io.siddhi.query.compiler.SiddhiQLParser;

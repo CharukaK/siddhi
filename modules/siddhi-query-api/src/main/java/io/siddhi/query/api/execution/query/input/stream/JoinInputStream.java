@@ -65,6 +65,10 @@ public class JoinInputStream extends InputStream {
         return onCompare;
     }
 
+    public void setOnCompare(Expression onCompare) {
+        this.onCompare = onCompare;
+    }
+
     public EventTrigger getTrigger() {
         return trigger;
     }

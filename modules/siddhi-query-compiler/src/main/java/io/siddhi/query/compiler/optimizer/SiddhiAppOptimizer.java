@@ -1,4 +1,4 @@
-package io.siddhi.query.api.optimizer2;
+package io.siddhi.query.compiler.optimizer;
 
 import io.siddhi.query.api.SiddhiApp;
 import io.siddhi.query.api.definition.Attribute;
@@ -7,8 +7,9 @@ import io.siddhi.query.api.definition.TableDefinition;
 import io.siddhi.query.api.execution.ExecutionElement;
 import io.siddhi.query.api.execution.query.Query;
 import io.siddhi.query.api.execution.query.input.stream.JoinInputStream;
-import io.siddhi.query.api.execution.query.selection.OutputAttribute;
-import io.siddhi.query.api.optimizer2.beans.QueryModels.SPJQueryModel;
+import io.siddhi.query.api.execution.query.input.stream.SingleInputStream;
+import io.siddhi.query.compiler.optimizer.beans.QueryModels.SPJQueryModel;
+import io.siddhi.query.compiler.optimizer.beans.QueryModels.SPQueryModel;
 
 import java.util.HashMap;
 import java.util.List;
@@ -29,6 +30,31 @@ public class SiddhiAppOptimizer {
         for (ExecutionElement executionElement: siddhiApp.getExecutionElementList()) {
             if(executionElement instanceof Query && ((Query) executionElement).getInputStream() instanceof JoinInputStream) {
                 SPJQueryModel spjQueryModel = new SPJQueryModel((Query) executionElement, this.completeStreamMap);
+                spjQueryModel.applyOptimization();
+
+                ((SingleInputStream)((JoinInputStream) ((Query) executionElement).getInputStream()).getLeftInputStream())
+                        .setWindowPosition(spjQueryModel.getLeftInputModel().getWindowPosition());
+
+                ((SingleInputStream)((JoinInputStream) ((Query) executionElement).getInputStream()).getRightInputStream())
+                        .setWindowPosition(spjQueryModel.getRightInputModel().getWindowPosition());
+
+                ((SingleInputStream)((JoinInputStream) ((Query) executionElement).getInputStream()).getLeftInputStream())
+                        .setStreamHandlers(spjQueryModel.getLeftInputModel().getStreamFilters());
+
+                ((SingleInputStream)((JoinInputStream) ((Query) executionElement).getInputStream()).getRightInputStream())
+                        .setStreamHandlers(spjQueryModel.getRightInputModel().getStreamFilters());
+
+                ((Query)executionElement).getSelector().setHavingExpression(spjQueryModel.getHavingCondition());
+                ((JoinInputStream)((Query) executionElement).getInputStream()).setOnCompare(spjQueryModel.getOnConditionExpression());
+            }
+
+            if(executionElement instanceof Query && ((Query) executionElement).getInputStream() instanceof SingleInputStream) {
+                SPQueryModel spQueryModel = new SPQueryModel((Query) executionElement, this.completeStreamMap);
+                spQueryModel.applyOptimization();
+
+                ((SingleInputStream) ((Query) executionElement).getInputStream()).setWindowPosition(spQueryModel.getInputModel().getWindowPosition());
+                ((SingleInputStream) ((Query) executionElement).getInputStream()).setStreamHandlers(spQueryModel.getInputModel().getStreamFilters());
+                ((Query) executionElement).getSelector().setHavingExpression(spQueryModel.getHavingCondition());
             }
         }
 
