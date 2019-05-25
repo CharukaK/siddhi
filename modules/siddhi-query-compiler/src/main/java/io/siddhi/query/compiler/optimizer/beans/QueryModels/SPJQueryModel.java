@@ -84,7 +84,6 @@ public class SPJQueryModel extends QueryModel {
             } else if (!keepRight) {
                 // move only right selection
                 moveSelectionOfOnCondition(((And) expression).getRightExpression(), leftInputModel, rightInputModel);
-                expression = ((Condition) expression).getLeftExpression();
                 if(depth==0) {
                     this.onConditionExpression = ((Condition) expression).getLeftExpression();
                 } else {
